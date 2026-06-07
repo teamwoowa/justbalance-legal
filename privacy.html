@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – JustBalance</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #06D6A0;
+      --border: #e0e0e0;
+      --max: 720px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+      padding: 24px 20px 60px;
+    }
+    .container { max-width: var(--max); margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+    .logo { font-weight: 700; font-size: 18px; color: var(--accent); text-decoration: none; }
+    .lang-toggle {
+      display: flex; gap: 4px;
+    }
+    .lang-toggle button {
+      border: 1px solid var(--border); background: transparent;
+      padding: 5px 12px; border-radius: 6px; cursor: pointer;
+      font-size: 13px; color: var(--muted);
+    }
+    .lang-toggle button.active {
+      background: var(--accent); color: white; border-color: var(--accent);
+    }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+    h2 { font-size: 17px; font-weight: 600; margin: 32px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    p { margin-bottom: 12px; }
+    ul { padding-left: 22px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px; }
+    th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+    th { background: #f5f5f5; font-weight: 600; }
+    a { color: var(--accent); }
+    .section { display: none; }
+    .section.active { display: block; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a class="logo" href="index.html">JustBalance</a>
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="btn-ko" onclick="setLang('ko')">한국어</button>
+    </div>
+  </header>
+
+  <!-- ───────────── ENGLISH ───────────── -->
+  <div id="sec-en" class="section active">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: June 7, 2026 &nbsp;·&nbsp; Last updated: June 7, 2026</p>
+
+    <p>woowa ("we", "us", "our") operates the JustBalance mobile application. This Privacy Policy explains what personal data we collect, why we collect it, and your rights regarding that data. We are committed to compliance with the EU General Data Protection Regulation (GDPR) and the Korean Personal Information Protection Act (PIPA).</p>
+
+    <h2>1. Data Controller</h2>
+    <p>woowa<br>
+    Email: <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a></p>
+
+    <h2>2. Data We Collect</h2>
+    <table>
+      <thead><tr><th>Category</th><th>Data items</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Account</td><td>Email address, authentication tokens</td><td>You / Google Sign-In</td></tr>
+        <tr><td>Financial data</td><td>Transaction amounts, dates, categories, memos, tags, account names and balances, budget settings, recurring transaction settings, portfolio holdings</td><td>You (manually entered)</td></tr>
+        <tr><td>Error logs</td><td>App version, platform, error type, screen name, anonymized error message, partial stack trace. <strong>Not collected:</strong> transaction amounts, account names, memos, tags, or any user-entered text.</td><td>Automatically on crash/error</td></tr>
+        <tr><td>Preferences</td><td>Display currency, month start date, language setting</td><td>You</td></tr>
+      </tbody>
+    </table>
+    <p>We do <strong>not</strong> collect location data, advertising identifiers, browsing history, or any data not listed above.</p>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li><strong>Account &amp; financial data</strong> – to provide and operate the JustBalance service (viewing, editing, and analyzing your personal finances).</li>
+      <li><strong>Error logs</strong> – to identify and fix bugs, improving app stability and reliability.</li>
+      <li><strong>Preferences</strong> – to personalize your in-app experience.</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, or sell it to third parties.</p>
+
+    <h2>4. Legal Basis for Processing (GDPR)</h2>
+    <table>
+      <thead><tr><th>Data</th><th>Legal basis</th></tr></thead>
+      <tbody>
+        <tr><td>Account &amp; financial data</td><td>Performance of contract – Art. 6(1)(b) GDPR</td></tr>
+        <tr><td>Error logs</td><td>Legitimate interests – Art. 6(1)(f) GDPR (improving app reliability)</td></tr>
+        <tr><td>Preferences</td><td>Performance of contract – Art. 6(1)(b) GDPR</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Third-Party Service Providers</h2>
+    <p>We use the following sub-processors, all bound by data processing agreements:</p>
+    <ul>
+      <li><strong>Supabase BV</strong> (EU region – Frankfurt, Germany) – database hosting and authentication infrastructure.</li>
+      <li><strong>Google LLC</strong> – Google Sign-In authentication only. When you sign in with Google, Google processes your email address and authentication token in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+    </ul>
+    <p>Your data is stored on servers located in the European Union (Frankfurt, Germany) and is not transferred outside the EEA without adequate safeguards.</p>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Error logs</strong> – automatically and permanently deleted after 90 days.</li>
+      <li><strong>All other data</strong> – retained until you delete your account.</li>
+      <li><strong>Account deletion</strong> – when you delete your account (Settings → Delete account), all your data is immediately and permanently erased from our systems. This action cannot be undone.</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+    <p>Under the GDPR you have the following rights:</p>
+    <ul>
+      <li><strong>Right of access</strong> (Art. 15) – request a copy of your personal data.</li>
+      <li><strong>Right to rectification</strong> (Art. 16) – correct inaccurate data directly in the app.</li>
+      <li><strong>Right to erasure</strong> (Art. 17) – delete all your data by deleting your account in Settings.</li>
+      <li><strong>Right to restriction of processing</strong> (Art. 18) – request limited processing in certain circumstances.</li>
+      <li><strong>Right to data portability</strong> (Art. 20) – receive your data in a structured, machine-readable format.</li>
+      <li><strong>Right to object</strong> (Art. 21) – object to processing based on legitimate interests.</li>
+      <li><strong>Right to lodge a complaint</strong> – you may contact the German Federal Commissioner for Data Protection and Freedom of Information (BfDI) at <a href="https://www.bfdi.bund.de" target="_blank">www.bfdi.bund.de</a>.</li>
+    </ul>
+    <p>To exercise any right other than erasure (which is available in-app), contact us at <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>. We will respond within 30 days.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>JustBalance is not directed at children under the age of 16. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact us immediately.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Material changes will be communicated via an in-app notice. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+    <h2>10. Contact</h2>
+    <p>For any privacy-related questions or requests:<br>
+    <strong>woowa</strong><br>
+    <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a></p>
+  </div>
+
+  <!-- ───────────── KOREAN ───────────── -->
+  <div id="sec-ko" class="section">
+    <h1>개인정보처리방침</h1>
+    <p class="meta">시행일: 2026년 6월 7일 &nbsp;·&nbsp; 최종 수정: 2026년 6월 7일</p>
+
+    <p>woowa(이하 "회사")는 JustBalance 모바일 애플리케이션을 운영합니다. 본 개인정보처리방침은 회사가 수집하는 개인정보의 항목, 수집 목적, 보유 기간 및 이용자의 권리에 대해 안내합니다. 회사는 EU 일반 개인정보 보호법(GDPR) 및 대한민국 개인정보 보호법(PIPA)을 준수합니다.</p>
+
+    <h2>1. 개인정보 처리자</h2>
+    <p>woowa<br>
+    이메일: <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a></p>
+
+    <h2>2. 수집하는 개인정보 항목</h2>
+    <table>
+      <thead><tr><th>항목</th><th>수집 정보</th><th>수집 방법</th></tr></thead>
+      <tbody>
+        <tr><td>계정 정보</td><td>이메일 주소, 인증 토큰</td><td>직접 입력 / Google 로그인</td></tr>
+        <tr><td>금융 데이터</td><td>거래 금액·날짜·카테고리·메모·태그, 자산 계좌명 및 잔액, 예산 설정, 반복 거래 설정, 포트폴리오 보유 현황</td><td>이용자 직접 입력</td></tr>
+        <tr><td>오류 로그</td><td>앱 버전, 기기 플랫폼, 오류 유형, 화면 이름, 비식별화된 오류 메시지, 부분 스택 트레이스. <strong>미수집:</strong> 거래 금액, 계좌명, 메모, 태그 등 이용자 입력 데이터</td><td>앱 오류/충돌 시 자동 수집</td></tr>
+        <tr><td>환경 설정</td><td>표시 통화, 월 시작일, 언어 설정</td><td>이용자 설정</td></tr>
+      </tbody>
+    </table>
+    <p>위 항목 외 위치 정보, 광고 식별자, 브라우저 기록 등은 수집하지 않습니다.</p>
+
+    <h2>3. 개인정보 수집 및 이용 목적</h2>
+    <ul>
+      <li><strong>계정 및 금융 데이터</strong> – JustBalance 서비스 제공 (개인 재무 내역 조회·편집·분석)</li>
+      <li><strong>오류 로그</strong> – 버그 식별 및 앱 안정성 개선</li>
+      <li><strong>환경 설정</strong> – 앱 내 사용자 맞춤 경험 제공</li>
+    </ul>
+    <p>수집된 개인정보는 광고, 프로파일링, 제3자 판매 등의 목적으로 사용되지 않습니다.</p>
+
+    <h2>4. 개인정보 보유 및 이용 기간</h2>
+    <ul>
+      <li><strong>오류 로그</strong> – 수집일로부터 90일 후 자동 삭제</li>
+      <li><strong>그 외 모든 데이터</strong> – 회원 탈퇴 시까지 보유</li>
+      <li><strong>회원 탈퇴 시</strong> – 설정 → 계정 삭제를 통해 탈퇴하면 모든 개인정보가 즉시 영구 삭제되며, 복구가 불가능합니다.</li>
+    </ul>
+
+    <h2>5. 개인정보의 제3자 제공 및 위탁</h2>
+    <p>회사는 아래 서비스에 개인정보 처리를 위탁합니다. 모든 위탁사는 데이터 처리 계약을 체결하였습니다.</p>
+    <ul>
+      <li><strong>Supabase BV</strong> (EU 리전 – 독일 프랑크푸르트) – 데이터베이스 호스팅 및 인증 인프라</li>
+      <li><strong>Google LLC</strong> – Google 로그인 인증. Google 로그인 이용 시 이메일 주소 및 인증 토큰이 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 처리됩니다.</li>
+    </ul>
+    <p>이용자 데이터는 유럽연합(EU) 내 서버(독일 프랑크푸르트)에 저장되며, 적절한 안전조치 없이 EEA 외부로 이전되지 않습니다.</p>
+
+    <h2>6. 이용자의 권리</h2>
+    <p>이용자는 다음 권리를 행사할 수 있습니다 (GDPR 및 개인정보 보호법):</p>
+    <ul>
+      <li><strong>열람 요구권</strong> – 본인 개인정보 열람 요청</li>
+      <li><strong>정정 요구권</strong> – 앱 내에서 직접 수정 가능</li>
+      <li><strong>삭제 요구권</strong> – 설정 → 계정 삭제로 모든 데이터 즉시 삭제</li>
+      <li><strong>처리 제한 요구권</strong> – 특정 상황에서 처리 제한 요청</li>
+      <li><strong>이동 요구권</strong> – 개인정보를 구조화된 형식으로 제공 요청</li>
+      <li><strong>처리 반대권</strong> – 정당한 이익 기반 처리에 대한 반대</li>
+      <li><strong>감독기관 제소권</strong> – 개인정보보호위원회(<a href="https://www.pipc.go.kr" target="_blank">www.pipc.go.kr</a>) 또는 독일 연방 개인정보보호위원회(BfDI, <a href="https://www.bfdi.bund.de" target="_blank">www.bfdi.bund.de</a>)에 신고 가능</li>
+    </ul>
+    <p>앱 내 삭제 기능 외 권리 행사는 <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>으로 문의해 주세요. 30일 이내에 답변 드립니다.</p>
+
+    <h2>7. 아동의 개인정보 보호</h2>
+    <p>JustBalance는 만 16세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집된 것으로 판단되는 경우 즉시 연락해 주시기 바랍니다.</p>
+
+    <h2>8. 방침 변경 안내</h2>
+    <p>본 방침은 변경될 수 있습니다. 중요한 변경 사항은 앱 내 공지를 통해 안내됩니다. 페이지 상단의 "최종 수정" 날짜가 가장 최신 버전을 나타냅니다.</p>
+
+    <h2>9. 개인정보 보호 책임자 및 문의</h2>
+    <p><strong>woowa</strong><br>
+    <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a></p>
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('sec-en').className = 'section' + (lang === 'en' ? ' active' : '');
+    document.getElementById('sec-ko').className = 'section' + (lang === 'ko' ? ' active' : '');
+    document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+    document.getElementById('btn-ko').className = lang === 'ko' ? 'active' : '';
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>

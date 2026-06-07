@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JustBalance – Legal</title>
+  <style>
+    :root { --accent: #06D6A0; --text: #1a1a1a; --muted: #666; --border: #e0e0e0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #fff; color: var(--text);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      max-width: 440px; width: 100%;
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 40px 32px; text-align: center;
+    }
+    .logo { font-size: 28px; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+    .sub { font-size: 14px; color: var(--muted); margin-bottom: 36px; }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    .link-btn {
+      display: block; padding: 14px 20px;
+      border: 1px solid var(--border); border-radius: 10px;
+      text-decoration: none; color: var(--text);
+      font-weight: 500; font-size: 15px;
+      transition: border-color 0.15s;
+    }
+    .link-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .link-btn span { font-size: 12px; color: var(--muted); display: block; font-weight: 400; margin-top: 2px; }
+    .footer { margin-top: 32px; font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">JustBalance</div>
+    <div class="sub">by woowa</div>
+    <div class="links">
+      <a class="link-btn" href="privacy.html">
+        Privacy Policy
+        <span>개인정보처리방침</span>
+      </a>
+      <a class="link-btn" href="terms.html">
+        Terms of Service
+        <span>서비스 이용약관</span>
+      </a>
+    </div>
+    <div class="footer">
+      Questions? <a href="mailto:team.woowa@gmail.com" style="color: var(--accent);">team.woowa@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
