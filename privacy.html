@@ -212,14 +212,6 @@
   </div>
 </div>
 
-<script>
-  function setLang(lang) {
-    document.getElementById('sec-en').className = 'section' + (lang === 'en' ? ' active' : '');
-    document.getElementById('sec-ko').className = 'section' + (lang === 'ko' ? ' active' : '');
-    document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
-    document.getElementById('btn-ko').className = lang === 'ko' ? 'active' : '';
-    document.documentElement.lang = lang;
-  }
-</script>
+<script src="language.js"></script>
 </body>
 </html>
