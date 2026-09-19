@@ -16,3 +16,11 @@ No app-side per-document language switch or separate URL is required.
 Verify privacy/terms with `?lang=ko`, `?lang=en`, `?lang=ko-KR`, and an unsupported
 language. Check exactly one section, document language/title, active button,
 reload and internal links. Serve locally with `python -m http.server 8877`.
+
+## Privacy-policy update
+
+The September 19 update adds prominent account/data deletion paths in both
+languages, current Account management steps, email requests, selected-transaction
+deletion, Google/Gmail/Yahoo data flows and Google Play developer-support purchase
+processing. Validate both query languages and their deletion anchors before merge
+and again after deployment.

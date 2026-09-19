@@ -30,11 +30,13 @@
     }
     const current = new URL(window.location.href);
     current.searchParams.set('lang', language);
+    if (current.hash.startsWith('#delete-account-')) current.hash = '#delete-account-' + language;
     history.replaceState(null, '', current);
     for (const link of document.querySelectorAll('a[href]')) {
       const target = new URL(link.getAttribute('href'), current);
       if (target.origin === current.origin && /\/(?:index|privacy|terms)\.html$/.test(target.pathname)) {
         target.searchParams.set('lang', language);
+        if (target.hash.startsWith('#delete-account-')) target.hash = '#delete-account-' + language;
         link.href = target.href;
       }
     }

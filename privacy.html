@@ -46,6 +46,10 @@
     th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
     th { background: #f5f5f5; font-weight: 600; }
     a { color: var(--accent); }
+    .deletion-box { border: 2px solid var(--accent); border-radius: 12px; padding: 18px; margin: 20px 0 32px; }
+    .deletion-box h2 { margin-top: 0; }
+    .deletion-box h3 { font-size: 16px; margin: 18px 0 8px; }
+    ol { padding-left: 22px; margin-bottom: 12px; }
     .section { display: none; }
     .section.active { display: block; }
   </style>
@@ -63,7 +67,41 @@
   <!-- ───────────── ENGLISH ───────────── -->
   <div id="sec-en" class="section active">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: June 7, 2026 &nbsp;·&nbsp; Last updated: June 7, 2026</p>
+    <p class="meta">Effective date: June 7, 2026 &nbsp;·&nbsp; Last updated: September 19, 2026</p>
+
+    <section class="deletion-box" aria-labelledby="delete-account-en">
+      <h2 id="delete-account-en">Delete your Just Balance / JustBalance account and data</h2>
+      <p><strong>App: Just Balance (JustBalance) · Developer: Woowa</strong></p>
+      <h3>Request deletion by email, without the app</h3>
+      <ol>
+        <li>Send an email from the address registered to your JustBalance account to <a href="mailto:team.woowa@gmail.com?subject=JustBalance%20account%20and%20data%20deletion%20request">team.woowa@gmail.com</a>.</li>
+        <li>Use the subject “JustBalance account and data deletion request” and state that you want your account and its associated data deleted. If you cannot access your registered email, contact the same address for help verifying ownership.</li>
+        <li>We may ask you to confirm ownership before deletion. Do not send your password or authentication codes. We will reply within 30 days and confirm when deletion is complete.</li>
+      </ol>
+      <h3>Delete in the app</h3>
+      <ol>
+        <li>Sign in and open <strong>Settings</strong>.</li>
+        <li>Tap your email address / <strong>Account management</strong>.</li>
+        <li>Choose <strong>Delete account</strong>, then confirm both the warning and final deletion prompt while online.</li>
+      </ol>
+      <p>Successful in-app deletion removes your account and associated records from the live service database. Deletion cannot be undone. Uninstalling the app or signing out does not delete the account. Deleting JustBalance does not delete your Google account.</p>
+      <h3>What is deleted and what is retained</h3>
+      <table>
+        <thead><tr><th>Data</th><th>Deletion and additional retention</th></tr></thead>
+        <tbody>
+          <tr><td>Login account, email, authentication identity/profile metadata and server-stored preferences</td><td>Deleted from the live service database when account deletion completes. Additional retention there: 0 days.</td></tr>
+          <tr><td>Transactions, refunds, dates, amounts, memos, tags, financial accounts and balances, portfolio holdings, categories, budgets and recurring transaction settings</td><td>Deleted from the live service database when account deletion completes. Additional retention there: 0 days.</td></tr>
+          <tr><td>Developer-support purchase verification records, including product and order data, purchase status and time, billing region, test flag, and one-way purchase-token and account-identifier fingerprints</td><td>Deleted from the live service database when account deletion completes. Google Play may separately retain its payment and transaction records under Google's terms and privacy policy.</td></tr>
+          <tr><td>Linked in-app support requests and error logs</td><td>Deleted with the account. While an account exists, error logs older than 90 days are automatically purged daily.</td></tr>
+          <tr><td>Deletion/support emails and copies of requested CSV export emails held by Woowa</td><td>Deleted within 90 days after the request or export is completed, unless longer retention is required by law or needed to resolve an active dispute.</td></tr>
+          <tr><td>Service database backups</td><td>Deleted or overwritten through backup rotation within 7 days after deletion from the live database.</td></tr>
+          <tr><td>Exports downloaded or emails retained by you</td><td>These copies are under your control. Account deletion does not remove files from your devices or messages from your inbox.</td></tr>
+        </tbody>
+      </table>
+      <h3>Delete selected data while keeping your account</h3>
+      <p>Open a transaction, enter its edit screen, choose Delete and confirm. Complete synchronization online for deletion from the service. A bookkeeping expense transaction with linked refund entries requires those refund entries to be handled first. Your login account is retained. You may also email the address below to specify which data you want deleted while keeping your account.</p>
+      <p>For deletion assistance, email <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>. You do not need to reinstall the app to make a request.</p>
+    </section>
 
     <p>Woowa ("we", "us", "our") operates the JustBalance mobile application. This Privacy Policy explains what personal data we collect, why we collect it, and your rights regarding that data. We are committed to compliance with the EU General Data Protection Regulation (GDPR) and the Korean Personal Information Protection Act (PIPA).</p>
 
@@ -75,18 +113,23 @@
     <table>
       <thead><tr><th>Category</th><th>Data items</th><th>Source</th></tr></thead>
       <tbody>
-        <tr><td>Account</td><td>Email address, authentication tokens</td><td>You / Google Sign-In</td></tr>
+        <tr><td>Account</td><td>Email address, account identifier and authentication information; Google may also supply a name and profile image URL during sign-in</td><td>You / Google Sign-In</td></tr>
         <tr><td>Financial data</td><td>Transaction amounts, dates, categories, memos, tags, account names and balances, budget settings, recurring transaction settings, portfolio holdings</td><td>You (manually entered)</td></tr>
-        <tr><td>Error logs</td><td>App version, platform, error type, screen name, anonymized error message, partial stack trace. <strong>Not collected:</strong> transaction amounts, account names, memos, tags, or any user-entered text.</td><td>Automatically on crash/error</td></tr>
+        <tr><td>Developer-support purchases</td><td>Product ID, order ID, purchase status and completion time, billing region, test-purchase flag, and one-way fingerprints of the purchase token and account identifier. We do not receive your card number or payment-method details.</td><td>Your optional purchase / Google Play</td></tr>
+        <tr><td>Error logs</td><td>User ID, app version, platform, error type, screen name, redacted error message, partial stack trace. <strong>Not collected:</strong> transaction amounts, account names, memos, tags, or any user-entered text.</td><td>Automatically on crash/error</td></tr>
+        <tr><td>Support and exports</td><td>Registered email, support/deletion request content, selected CSV transaction data, and export request dates and identifiers used to enforce request limits</td><td>You / your export request</td></tr>
+        <tr><td>Search and authentication metadata</td><td>Ticker-request search text sent to Yahoo Finance; session identifiers, IP address and user-agent metadata processed by authentication services</td><td>Your search / authentication requests</td></tr>
         <tr><td>Preferences</td><td>Display currency, month start date, language setting</td><td>You</td></tr>
       </tbody>
     </table>
-    <p>We do <strong>not</strong> collect location data, advertising identifiers, browsing history, or any data not listed above.</p>
+    <p>The app does not access device location, advertising identifiers or your browser history. External authentication and market-data services receive the connection metadata described above.</p>
 
     <h2>3. How We Use Your Data</h2>
     <ul>
       <li><strong>Account &amp; financial data</strong> – to provide and operate the JustBalance service (viewing, editing, and analyzing your personal finances).</li>
       <li><strong>Error logs</strong> – to identify and fix bugs, improving app stability and reliability.</li>
+      <li><strong>Support, exports and searches</strong> – to answer requests, deliver records, enforce export limits and find instruments. Authentication metadata supports sessions and security.</li>
+      <li><strong>Developer-support purchases</strong> – to verify and consume a voluntary purchase, prevent duplicate or fraudulent claims, and show your verified support count.</li>
       <li><strong>Preferences</strong> – to personalize your in-app experience.</li>
     </ul>
     <p>We do not use your data for advertising, profiling, or sell it to third parties.</p>
@@ -97,43 +140,42 @@
       <tbody>
         <tr><td>Account &amp; financial data</td><td>Performance of contract – Art. 6(1)(b) GDPR</td></tr>
         <tr><td>Error logs</td><td>Legitimate interests – Art. 6(1)(f) GDPR (improving app reliability)</td></tr>
+        <tr><td>Developer-support purchases</td><td>Performance of contract – Art. 6(1)(b) GDPR; legitimate interests – Art. 6(1)(f) GDPR for fraud and replay prevention</td></tr>
         <tr><td>Preferences</td><td>Performance of contract – Art. 6(1)(b) GDPR</td></tr>
       </tbody>
     </table>
 
     <h2>5. Third-Party Service Providers</h2>
-    <p>We use the following sub-processors, all bound by data processing agreements:</p>
+    <p>We use the following external services:</p>
     <ul>
       <li><strong>Supabase BV</strong> (EU region – Frankfurt, Germany) – database hosting and authentication infrastructure.</li>
-      <li><strong>Google LLC</strong> – Google Sign-In authentication only. When you sign in with Google, Google processes your email address and authentication token in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>Google LLC</strong> – Google Sign-In and requested email delivery. Google may provide basic profile information during sign-in; we do not use names or profile images as app features. We also use Gmail to receive support/deletion requests and send requested CSV exports. Authentication and email data are processed in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>Google Play</strong> – processes optional developer-support payments and returns purchase data used by our server to verify, prevent duplicate claims and consume the product. Google collects payment-method details directly; JustBalance does not receive them. Google processes its records under the <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a> and <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
     </ul>
-    <p>Your data is stored on servers located in the European Union (Frankfurt, Germany) and is not transferred outside the EEA without adequate safeguards.</p>
+    <p>Ticker-request searches and currency-pair validation connect directly to Yahoo Finance. Search text and connection metadata, including IP address, reach Yahoo; currency lists are retrieved from Frankfurter. These services receive connection metadata under their own policies. We do not send your password, balances or transaction memos to these market-data endpoints.</p>
+    <p>The application database is hosted in the European Union (Frankfurt, Germany). Google authentication, email and Play payment processing are separate services; their processing locations and safeguards are described in the linked Google policies.</p>
 
     <h2>6. Data Retention</h2>
-    <ul>
-      <li><strong>Error logs</strong> – automatically and permanently deleted after 90 days.</li>
-      <li><strong>All other data</strong> – retained until you delete your account.</li>
-      <li><strong>Account deletion</strong> – when you delete your account (Settings → Delete account), all your data is immediately and permanently erased from our systems. This action cannot be undone.</li>
-    </ul>
+    <p>Account and financial records are retained while your account is active. For deletion scope, additional retention and email requests, see <a href="#delete-account-en">Delete your account and data</a> above.</p>
 
     <h2>7. Your Rights</h2>
     <p>Under the GDPR you have the following rights:</p>
     <ul>
       <li><strong>Right of access</strong> (Art. 15) – request a copy of your personal data.</li>
       <li><strong>Right to rectification</strong> (Art. 16) – correct inaccurate data directly in the app.</li>
-      <li><strong>Right to erasure</strong> (Art. 17) – delete all your data by deleting your account in Settings.</li>
+      <li><strong>Right to erasure</strong> (Art. 17) – request account and associated data deletion by email or through Settings → Account management → Delete account; see the deletion section above.</li>
       <li><strong>Right to restriction of processing</strong> (Art. 18) – request limited processing in certain circumstances.</li>
       <li><strong>Right to data portability</strong> (Art. 20) – receive your data in a structured, machine-readable format.</li>
       <li><strong>Right to object</strong> (Art. 21) – object to processing based on legitimate interests.</li>
       <li><strong>Right to lodge a complaint</strong> – you may contact the German Federal Commissioner for Data Protection and Freedom of Information (BfDI) at <a href="https://www.bfdi.bund.de" target="_blank">www.bfdi.bund.de</a>.</li>
     </ul>
-    <p>To exercise any right other than erasure (which is available in-app), contact us at <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>. We will respond within 30 days.</p>
+    <p>To exercise your rights, including requesting deletion without the app, contact us at <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>. We will respond within 30 days.</p>
 
     <h2>8. Children's Privacy</h2>
     <p>JustBalance is not directed at children under the age of 16. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact us immediately.</p>
 
     <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Material changes will be communicated via an in-app notice. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+    <p>We may update this Privacy Policy from time to time. Material changes will be communicated via an in-app notice. The "Last updated" date at the top of this page reflects the most recent revision.</p>
 
     <h2>10. Contact</h2>
     <p>For any privacy-related questions or requests:<br>
@@ -144,7 +186,41 @@
   <!-- ───────────── KOREAN ───────────── -->
   <div id="sec-ko" class="section">
     <h1>개인정보처리방침</h1>
-    <p class="meta">시행일: 2026년 6월 7일 &nbsp;·&nbsp; 최종 수정: 2026년 6월 7일</p>
+    <p class="meta">시행일: 2026년 6월 7일 &nbsp;·&nbsp; 최종 수정: 2026년 9월 19일</p>
+
+    <section class="deletion-box" aria-labelledby="delete-account-ko">
+      <h2 id="delete-account-ko">잔고는거들뿐 계정 및 관련 데이터 삭제</h2>
+      <p><strong>앱: 잔고는거들뿐 / Just Balance (JustBalance) · 개발자: Woowa</strong></p>
+      <h3>앱 없이 이메일로 삭제 요청</h3>
+      <ol>
+        <li>가입에 사용한 이메일 주소에서 <a href="mailto:team.woowa@gmail.com?subject=JustBalance%20account%20and%20data%20deletion%20request">team.woowa@gmail.com</a>으로 메일을 보내 주세요.</li>
+        <li>제목을 “JustBalance 계정 및 데이터 삭제 요청”으로 작성하고, 본문에 계정과 관련 데이터 삭제를 요청한다고 적어 주세요. 가입 이메일에 접근할 수 없다면 같은 주소로 연락해 본인 확인 방법을 안내받을 수 있습니다.</li>
+        <li>삭제 전에 계정 소유 여부를 확인할 수 있습니다. 비밀번호나 인증 코드는 보내지 마세요. 30일 이내에 답변하고, 삭제가 완료되면 결과를 안내합니다.</li>
+      </ol>
+      <h3>앱에서 직접 삭제</h3>
+      <ol>
+        <li>로그인 후 <strong>설정</strong>을 열어 주세요.</li>
+        <li>이메일 주소가 표시된 <strong>계정 관리</strong>를 눌러 주세요.</li>
+        <li><strong>계정 삭제</strong>를 선택하고, 인터넷에 연결된 상태에서 경고와 최종 삭제 안내를 차례로 확인해 주세요.</li>
+      </ol>
+      <p>앱에서 삭제가 성공하면 운영 서비스 데이터베이스의 계정과 관련 기록이 삭제됩니다. 삭제는 되돌릴 수 없습니다. 앱 삭제나 로그아웃만으로는 계정이 삭제되지 않으며, JustBalance 계정 삭제가 Google 계정 자체를 삭제하지는 않습니다.</p>
+      <h3>삭제되는 데이터와 추가 보관 기간</h3>
+      <table>
+        <thead><tr><th>데이터</th><th>삭제 시점 및 추가 보관</th></tr></thead>
+        <tbody>
+          <tr><td>로그인 계정, 이메일, 인증 식별·프로필 메타데이터, 서버에 저장된 환경 설정</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. 해당 데이터베이스의 추가 보관 기간: 0일.</td></tr>
+          <tr><td>거래·환불 내역, 날짜·금액·메모·태그, 자산 계좌와 잔액, 투자 보유 내역, 카테고리·예산, 반복 거래 설정</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. 해당 데이터베이스의 추가 보관 기간: 0일.</td></tr>
+          <tr><td>제품·주문 정보, 구매 상태·완료 시각, 결제 지역, 테스트 여부, 구매 토큰·계정 식별자의 단방향 지문을 포함한 개발자 응원 구매 검증 기록</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. Google Play는 Google 약관 및 개인정보처리방침에 따라 결제·거래 기록을 별도로 보관할 수 있습니다.</td></tr>
+          <tr><td>계정에 연결된 앱 내 문의 및 오류 로그</td><td>계정과 함께 삭제합니다. 계정 유지 중에는 수집 후 90일이 지난 오류 로그를 매일 자동 정리합니다.</td></tr>
+          <tr><td>Woowa가 보유한 삭제 요청·문의 메일 및 요청한 CSV 내보내기 메일 사본</td><td>요청 처리 또는 내보내기 완료 후 90일 이내에 삭제합니다. 다만 법령상 의무가 있거나 진행 중인 분쟁 해결에 필요한 경우에는 더 오래 보관할 수 있습니다.</td></tr>
+          <tr><td>서비스 데이터베이스 백업</td><td>운영 데이터베이스에서 삭제된 후 최대 7일 이내에 백업 순환 과정에서 삭제하거나 덮어씁니다.</td></tr>
+          <tr><td>사용자가 내려받은 내보내기 파일 및 보관한 이메일</td><td>사용자가 관리하는 사본입니다. 계정 삭제로 기기의 파일이나 받은편지함의 이메일이 삭제되지는 않습니다.</td></tr>
+        </tbody>
+      </table>
+      <h3>계정을 유지하면서 일부 데이터 삭제</h3>
+      <p>거래를 열어 수정 화면에서 삭제를 선택하고 확인해 주세요. 서비스에 삭제가 반영되려면 온라인 동기화를 완료해야 합니다. 환불이 연결된 지출은 연결된 환불을 먼저 처리해야 합니다. 로그인 계정은 유지됩니다. 아래 이메일로 계정을 유지한 채 삭제하고 싶은 데이터를 지정하여 요청할 수도 있습니다.</p>
+      <p>삭제 관련 도움이 필요하면 <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>으로 문의해 주세요. 삭제 요청을 위해 앱을 다시 설치할 필요는 없습니다.</p>
+    </section>
 
     <p>Woowa(이하 "회사")는 JustBalance 모바일 애플리케이션을 운영합니다. 본 개인정보처리방침은 회사가 수집하는 개인정보의 항목, 수집 목적, 보유 기간 및 이용자의 권리에 대해 안내합니다. 회사는 EU 일반 개인정보 보호법(GDPR) 및 대한민국 개인정보 보호법(PIPA)을 준수합니다.</p>
 
@@ -156,49 +232,52 @@
     <table>
       <thead><tr><th>항목</th><th>수집 정보</th><th>수집 방법</th></tr></thead>
       <tbody>
-        <tr><td>계정 정보</td><td>이메일 주소, 인증 토큰</td><td>직접 입력 / Google 로그인</td></tr>
+        <tr><td>계정 정보</td><td>이메일 주소, 계정 식별자 및 인증 정보. Google 로그인 과정에서 이름과 프로필 사진 URL이 함께 제공될 수 있음</td><td>직접 입력 / Google 로그인</td></tr>
         <tr><td>금융 데이터</td><td>거래 금액·날짜·카테고리·메모·태그, 자산 계좌명 및 잔액, 예산 설정, 반복 거래 설정, 포트폴리오 보유 현황</td><td>이용자 직접 입력</td></tr>
-        <tr><td>오류 로그</td><td>앱 버전, 기기 플랫폼, 오류 유형, 화면 이름, 비식별화된 오류 메시지, 부분 스택 트레이스. <strong>미수집:</strong> 거래 금액, 계좌명, 메모, 태그 등 이용자 입력 데이터</td><td>앱 오류/충돌 시 자동 수집</td></tr>
+        <tr><td>개발자 응원 구매</td><td>제품 ID, 주문 ID, 구매 상태·완료 시각, 결제 지역, 테스트 구매 여부, 구매 토큰·계정 식별자의 단방향 지문. 카드 번호나 결제수단 정보는 앱이 전달받지 않습니다.</td><td>이용자의 선택적 구매 / Google Play</td></tr>
+        <tr><td>오류 로그</td><td>사용자 ID, 앱 버전, 기기 플랫폼, 오류 유형, 화면 이름, 민감한 패턴을 가린 오류 메시지, 부분 스택 트레이스. <strong>미수집:</strong> 거래 금액, 계좌명, 메모, 태그 등 이용자 입력 데이터</td><td>앱 오류/충돌 시 자동 수집</td></tr>
+        <tr><td>문의 및 내보내기</td><td>가입 이메일, 문의·삭제 요청 내용, 요청한 CSV 거래 데이터, 요청 제한에 사용하는 내보내기 요청일과 식별자</td><td>이용자 입력 / 내보내기 요청</td></tr>
+        <tr><td>검색 및 인증 메타데이터</td><td>Yahoo Finance로 전송하는 종목 추가 요청 검색어. 인증 서비스가 처리하는 세션 식별자, IP 주소 및 사용자 에이전트 정보</td><td>종목 검색 / 인증 요청</td></tr>
         <tr><td>환경 설정</td><td>표시 통화, 월 시작일, 언어 설정</td><td>이용자 설정</td></tr>
       </tbody>
     </table>
-    <p>위 항목 외 위치 정보, 광고 식별자, 브라우저 기록 등은 수집하지 않습니다.</p>
+    <p>앱은 기기 위치, 광고 식별자나 브라우저 방문 기록에 접근하지 않습니다. 외부 인증·시세 서비스에는 위에서 설명한 접속 정보가 전달됩니다.</p>
 
     <h2>3. 개인정보 수집 및 이용 목적</h2>
     <ul>
       <li><strong>계정 및 금융 데이터</strong> – JustBalance 서비스 제공 (개인 재무 내역 조회·편집·분석)</li>
       <li><strong>오류 로그</strong> – 버그 식별 및 앱 안정성 개선</li>
+      <li><strong>문의·내보내기·검색</strong> – 문의 응답, 거래 기록 전송, 내보내기 요청 제한 및 종목 검색. 인증 메타데이터는 세션 유지와 보안에 사용합니다.</li>
+      <li><strong>개발자 응원 구매</strong> – 선택한 구매의 유효성 확인과 소비 처리, 중복·부정 청구 방지, 검증된 응원 횟수 표시에 사용합니다.</li>
       <li><strong>환경 설정</strong> – 앱 내 사용자 맞춤 경험 제공</li>
     </ul>
     <p>수집된 개인정보는 광고, 프로파일링, 제3자 판매 등의 목적으로 사용되지 않습니다.</p>
 
     <h2>4. 개인정보 보유 및 이용 기간</h2>
-    <ul>
-      <li><strong>오류 로그</strong> – 수집일로부터 90일 후 자동 삭제</li>
-      <li><strong>그 외 모든 데이터</strong> – 회원 탈퇴 시까지 보유</li>
-      <li><strong>회원 탈퇴 시</strong> – 설정 → 계정 삭제를 통해 탈퇴하면 모든 개인정보가 즉시 영구 삭제되며, 복구가 불가능합니다.</li>
-    </ul>
+    <p>계정 및 금융 기록은 계정 유지 중 보유합니다. 삭제 범위, 추가 보관 기간과 이메일 요청 방법은 위의 <a href="#delete-account-ko">계정 및 관련 데이터 삭제</a>에서 확인해 주세요.</p>
 
     <h2>5. 개인정보의 제3자 제공 및 위탁</h2>
-    <p>회사는 아래 서비스에 개인정보 처리를 위탁합니다. 모든 위탁사는 데이터 처리 계약을 체결하였습니다.</p>
+    <p>앱은 다음 외부 서비스를 이용합니다.</p>
     <ul>
       <li><strong>Supabase BV</strong> (EU 리전 – 독일 프랑크푸르트) – 데이터베이스 호스팅 및 인증 인프라</li>
-      <li><strong>Google LLC</strong> – Google 로그인 인증. Google 로그인 이용 시 이메일 주소 및 인증 토큰이 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 처리됩니다.</li>
+      <li><strong>Google LLC</strong> – Google 로그인 및 요청한 이메일 전송. 로그인 시 기본 프로필 정보가 제공될 수 있으며, 이름·프로필 사진은 앱 기능에 사용하지 않습니다. Gmail로 문의·삭제 요청을 받고 요청한 CSV 내보내기를 전송합니다. 인증 및 이메일 정보는 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 처리됩니다.</li>
+      <li><strong>Google Play</strong> – 선택한 개발자 응원 결제를 처리하고, 서버가 구매 유효성·중복 청구 여부를 확인한 뒤 제품을 소비할 수 있도록 구매 정보를 제공합니다. 결제수단 정보는 Google이 직접 처리하며 JustBalance는 전달받지 않습니다. Google은 <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank">Google Payments 개인정보처리방침</a> 및 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 관련 기록을 처리합니다.</li>
     </ul>
-    <p>이용자 데이터는 유럽연합(EU) 내 서버(독일 프랑크푸르트)에 저장되며, 적절한 안전조치 없이 EEA 외부로 이전되지 않습니다.</p>
+    <p>종목 추가 요청 검색과 통화쌍 확인은 Yahoo Finance에 직접 연결합니다. 검색어와 IP 주소 등 접속 정보가 Yahoo에 전달되며, 통화 목록은 Frankfurter에서 조회합니다. 각 서비스는 자체 방침에 따라 접속 정보를 처리합니다. 이 시세 관련 요청에 비밀번호, 잔액, 거래 메모를 보내지 않습니다.</p>
+    <p>앱 데이터베이스는 유럽연합(EU) 내 독일 프랑크푸르트에서 호스팅됩니다. Google 인증·이메일·Play 결제 처리는 별도 서비스이며, 해당 서비스의 처리 위치와 보호 조치는 위 Google 방침을 확인해 주세요.</p>
 
     <h2>6. 이용자의 권리</h2>
     <p>이용자는 다음 권리를 행사할 수 있습니다 (GDPR 및 개인정보 보호법):</p>
     <ul>
       <li><strong>열람 요구권</strong> – 본인 개인정보 열람 요청</li>
       <li><strong>정정 요구권</strong> – 앱 내에서 직접 수정 가능</li>
-      <li><strong>삭제 요구권</strong> – 설정 → 계정 삭제로 모든 데이터 즉시 삭제</li>
+      <li><strong>삭제 요구권</strong> – 이메일 또는 설정 → 계정 관리 → 계정 삭제에서 계정과 관련 데이터 삭제 요청. 범위와 보관 기간은 위 삭제 안내 참조</li>
       <li><strong>처리 제한 요구권</strong> – 특정 상황에서 처리 제한 요청</li>
       <li><strong>이동 요구권</strong> – 개인정보를 구조화된 형식으로 제공 요청</li>
       <li><strong>처리 반대권</strong> – 정당한 이익 기반 처리에 대한 반대</li>
       <li><strong>감독기관 제소권</strong> – 개인정보보호위원회(<a href="https://www.pipc.go.kr" target="_blank">www.pipc.go.kr</a>) 또는 독일 연방 개인정보보호위원회(BfDI, <a href="https://www.bfdi.bund.de" target="_blank">www.bfdi.bund.de</a>)에 신고 가능</li>
     </ul>
-    <p>앱 내 삭제 기능 외 권리 행사는 <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>으로 문의해 주세요. 30일 이내에 답변 드립니다.</p>
+    <p>앱 없이 삭제를 요청하거나 다른 권리를 행사하려면 <a href="mailto:team.woowa@gmail.com">team.woowa@gmail.com</a>으로 문의해 주세요. 30일 이내에 답변 드립니다.</p>
 
     <h2>7. 아동의 개인정보 보호</h2>
     <p>JustBalance는 만 16세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동의 정보가 수집된 것으로 판단되는 경우 즉시 연락해 주시기 바랍니다.</p>
