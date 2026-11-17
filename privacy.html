@@ -67,7 +67,7 @@
   <!-- ───────────── ENGLISH ───────────── -->
   <div id="sec-en" class="section active">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: June 7, 2026 &nbsp;·&nbsp; Last updated: September 19, 2026</p>
+    <p class="meta">Effective date: June 7, 2026 &nbsp;·&nbsp; Last updated: November 17, 2026</p>
 
     <section class="deletion-box" aria-labelledby="delete-account-en">
       <h2 id="delete-account-en">Delete your Just Balance / JustBalance account and data</h2>
@@ -91,7 +91,9 @@
         <tbody>
           <tr><td>Login account, email, authentication identity/profile metadata and server-stored preferences</td><td>Deleted from the live service database when account deletion completes. Additional retention there: 0 days.</td></tr>
           <tr><td>Transactions, refunds, dates, amounts, memos, tags, financial accounts and balances, portfolio holdings, categories, budgets and recurring transaction settings</td><td>Deleted from the live service database when account deletion completes. Additional retention there: 0 days.</td></tr>
-          <tr><td>Developer-support purchase verification records, including product and order data, purchase status and time, billing region, test flag, and one-way purchase-token and account-identifier fingerprints</td><td>Deleted from the live service database when account deletion completes. Google Play may separately retain its payment and transaction records under Google's terms and privacy policy.</td></tr>
+          <tr><td>Google Play developer-support purchase verification records, including product and order data, purchase status and time, billing region, test flag, and one-way purchase-token and account-identifier fingerprints</td><td>Deleted from the live service database when account deletion completes. Google Play may separately retain its payment and transaction records under Google's terms and privacy policy.</td></tr>
+          <tr><td>Account-linked Apple developer-support verification records, including product/transaction identifiers, purchase status and time, environment/test status, and app-account binding</td><td>Deleted from the live service database when account deletion completes. Apple may retain its independent payment and transaction records under its own terms and privacy policy. The separate minimal refund marker below is an explicit exception.</td></tr>
+          <tr><td>Minimal Apple refund/revocation marker: transaction ID, product ID, environment/test status and revocation time. It has no account-ID, email or app-account-token fields.</td><td>Retained separately, including after account deletion, only while needed to prevent replay or reapplication of a refunded/revoked transaction. No automatic expiry is currently applied. We periodically review whether this retention is still necessary.</td></tr>
           <tr><td>Linked in-app support requests and error logs</td><td>Deleted with the account. While an account exists, error logs older than 90 days are automatically purged daily.</td></tr>
           <tr><td>Deletion/support emails and copies of requested CSV export emails held by Woowa</td><td>Deleted within 90 days after the request or export is completed, unless longer retention is required by law or needed to resolve an active dispute.</td></tr>
           <tr><td>Service database backups</td><td>Deleted or overwritten through backup rotation within 7 days after deletion from the live database.</td></tr>
@@ -115,7 +117,8 @@
       <tbody>
         <tr><td>Account</td><td>Email address, account identifier and authentication information; Google may also supply a name and profile image URL during sign-in</td><td>You / Google Sign-In</td></tr>
         <tr><td>Financial data</td><td>Transaction amounts, dates, categories, memos, tags, account names and balances, budget settings, recurring transaction settings, portfolio holdings</td><td>You (manually entered)</td></tr>
-        <tr><td>Developer-support purchases</td><td>Product ID, order ID, purchase status and completion time, billing region, test-purchase flag, and one-way fingerprints of the purchase token and account identifier. We do not receive your card number or payment-method details.</td><td>Your optional purchase / Google Play</td></tr>
+        <tr><td>Developer-support purchases (Google Play)</td><td>Product ID, order ID, purchase status and completion time, billing region, test-purchase flag, and one-way fingerprints of the purchase token and account identifier. We do not receive your card number or payment-method details.</td><td>Your optional purchase / Google Play</td></tr>
+        <tr><td>Developer-support purchases (Apple, where available)</td><td>Apple product and transaction identifiers, purchase status and time, environment/test status, and the UUID app-account token used to bind a purchase to your signed-in app account. We process refund/revocation data and the minimal marker described above. We do not receive your card number or payment-method details.</td><td>Your optional purchase / Apple App Store and verified Apple transaction or notification</td></tr>
         <tr><td>Error logs</td><td>User ID, app version, platform, error type, screen name, redacted error message, partial stack trace. <strong>Not collected:</strong> transaction amounts, account names, memos, tags, or any user-entered text.</td><td>Automatically on crash/error</td></tr>
         <tr><td>Support and exports</td><td>Registered email, support/deletion request content, selected CSV transaction data, and export request dates and identifiers used to enforce request limits</td><td>You / your export request</td></tr>
         <tr><td>Search and authentication metadata</td><td>Ticker-request search text sent to Yahoo Finance; session identifiers, IP address and user-agent metadata processed by authentication services</td><td>Your search / authentication requests</td></tr>
@@ -130,6 +133,7 @@
       <li><strong>Error logs</strong> – to identify and fix bugs, improving app stability and reliability.</li>
       <li><strong>Support, exports and searches</strong> – to answer requests, deliver records, enforce export limits and find instruments. Authentication metadata supports sessions and security.</li>
       <li><strong>Developer-support purchases</strong> – to verify and consume a voluntary purchase, prevent duplicate or fraudulent claims, and show your verified support count.</li>
+      <li><strong>Apple refunds and revocations</strong> - to update the verified support count and prevent refunded/revoked transactions from being counted again. Minimal markers are not used for advertising or tracking.</li>
       <li><strong>Preferences</strong> – to personalize your in-app experience.</li>
     </ul>
     <p>We do not use your data for advertising, profiling, or sell it to third parties.</p>
@@ -151,6 +155,7 @@
       <li><strong>Supabase BV</strong> (EU region – Frankfurt, Germany) – database hosting and authentication infrastructure.</li>
       <li><strong>Google LLC</strong> – Google Sign-In and requested email delivery. Google may provide basic profile information during sign-in; we do not use names or profile images as app features. We also use Gmail to receive support/deletion requests and send requested CSV exports. Authentication and email data are processed in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
       <li><strong>Google Play</strong> – processes optional developer-support payments and returns purchase data used by our server to verify, prevent duplicate claims and consume the product. Google collects payment-method details directly; JustBalance does not receive them. Google processes its records under the <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank">Google Payments Privacy Notice</a> and <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+      <li><strong>Apple App Store</strong> - handles optional Apple developer-support payments and provides transaction/refund data for verification, account binding, completion and replay prevention. The app-account token links the purchase to your app account. Apple handles payment-method details directly; JustBalance does not receive them. Apple processes its independent records under its own terms and <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>.</li>
     </ul>
     <p>Ticker-request searches and currency-pair validation connect directly to Yahoo Finance. Search text and connection metadata, including IP address, reach Yahoo; currency lists are retrieved from Frankfurter. These services receive connection metadata under their own policies. We do not send your password, balances or transaction memos to these market-data endpoints.</p>
     <p>The application database is hosted in the European Union (Frankfurt, Germany). Google authentication, email and Play payment processing are separate services; their processing locations and safeguards are described in the linked Google policies.</p>
@@ -186,7 +191,7 @@
   <!-- ───────────── KOREAN ───────────── -->
   <div id="sec-ko" class="section">
     <h1>개인정보처리방침</h1>
-    <p class="meta">시행일: 2026년 6월 7일 &nbsp;·&nbsp; 최종 수정: 2026년 9월 19일</p>
+    <p class="meta">시행일: 2026년 6월 7일 &nbsp;·&nbsp; 최종 수정: 2026년 11월 17일</p>
 
     <section class="deletion-box" aria-labelledby="delete-account-ko">
       <h2 id="delete-account-ko">잔고는거들뿐 계정 및 관련 데이터 삭제</h2>
@@ -210,7 +215,9 @@
         <tbody>
           <tr><td>로그인 계정, 이메일, 인증 식별·프로필 메타데이터, 서버에 저장된 환경 설정</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. 해당 데이터베이스의 추가 보관 기간: 0일.</td></tr>
           <tr><td>거래·환불 내역, 날짜·금액·메모·태그, 자산 계좌와 잔액, 투자 보유 내역, 카테고리·예산, 반복 거래 설정</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. 해당 데이터베이스의 추가 보관 기간: 0일.</td></tr>
-          <tr><td>제품·주문 정보, 구매 상태·완료 시각, 결제 지역, 테스트 여부, 구매 토큰·계정 식별자의 단방향 지문을 포함한 개발자 응원 구매 검증 기록</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. Google Play는 Google 약관 및 개인정보처리방침에 따라 결제·거래 기록을 별도로 보관할 수 있습니다.</td></tr>
+          <tr><td>Google Play 제품·주문 정보, 구매 상태·완료 시각, 결제 지역, 테스트 여부, 구매 토큰·계정 식별자의 단방향 지문을 포함한 개발자 응원 구매 검증 기록</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. Google Play는 Google 약관 및 개인정보처리방침에 따라 결제·거래 기록을 별도로 보관할 수 있습니다.</td></tr>
+          <tr><td>제품·거래 식별자, 구매 상태·시각, 운영/테스트 환경 및 앱 계정 연결을 포함한 계정 연결 Apple 응원 구매 검증 기록</td><td>계정 삭제 완료 시 운영 서비스 데이터베이스에서 삭제합니다. Apple은 자체 약관 및 개인정보처리방침에 따라 결제·거래 기록을 별도로 보관할 수 있습니다. 아래의 별도 최소 환불 표식은 명시적인 예외입니다.</td></tr>
+          <tr><td>최소 Apple 환불·철회 표식: 거래 ID, 제품 ID, 운영/테스트 환경, 철회 시각. 계정 ID·이메일·앱 계정 토큰 필드는 없습니다.</td><td>환불·철회된 거래의 재전송이나 재적용을 막는 데 필요한 동안 계정 삭제 후에도 별도로 보관합니다. 현재 자동 만료는 적용하지 않습니다. 이 보관이 계속 필요한지 정기적으로 검토합니다.</td></tr>
           <tr><td>계정에 연결된 앱 내 문의 및 오류 로그</td><td>계정과 함께 삭제합니다. 계정 유지 중에는 수집 후 90일이 지난 오류 로그를 매일 자동 정리합니다.</td></tr>
           <tr><td>Woowa가 보유한 삭제 요청·문의 메일 및 요청한 CSV 내보내기 메일 사본</td><td>요청 처리 또는 내보내기 완료 후 90일 이내에 삭제합니다. 다만 법령상 의무가 있거나 진행 중인 분쟁 해결에 필요한 경우에는 더 오래 보관할 수 있습니다.</td></tr>
           <tr><td>서비스 데이터베이스 백업</td><td>운영 데이터베이스에서 삭제된 후 최대 7일 이내에 백업 순환 과정에서 삭제하거나 덮어씁니다.</td></tr>
@@ -234,7 +241,8 @@
       <tbody>
         <tr><td>계정 정보</td><td>이메일 주소, 계정 식별자 및 인증 정보. Google 로그인 과정에서 이름과 프로필 사진 URL이 함께 제공될 수 있음</td><td>직접 입력 / Google 로그인</td></tr>
         <tr><td>금융 데이터</td><td>거래 금액·날짜·카테고리·메모·태그, 자산 계좌명 및 잔액, 예산 설정, 반복 거래 설정, 포트폴리오 보유 현황</td><td>이용자 직접 입력</td></tr>
-        <tr><td>개발자 응원 구매</td><td>제품 ID, 주문 ID, 구매 상태·완료 시각, 결제 지역, 테스트 구매 여부, 구매 토큰·계정 식별자의 단방향 지문. 카드 번호나 결제수단 정보는 앱이 전달받지 않습니다.</td><td>이용자의 선택적 구매 / Google Play</td></tr>
+        <tr><td>개발자 응원 구매(Google Play)</td><td>제품 ID, 주문 ID, 구매 상태·완료 시각, 결제 지역, 테스트 구매 여부, 구매 토큰·계정 식별자의 단방향 지문. 카드 번호나 결제수단 정보는 앱이 전달받지 않습니다.</td><td>이용자의 선택적 구매 / Google Play</td></tr>
+        <tr><td>개발자 응원 구매(Apple, 제공되는 경우)</td><td>Apple 제품·거래 식별자, 구매 상태·시각, 운영/테스트 환경, 구매를 로그인한 앱 계정에 연결하는 UUID 앱 계정 토큰. 환불·철회 정보와 위에서 설명한 최소 표식을 처리합니다. 카드 번호나 결제수단 정보는 전달받지 않습니다.</td><td>이용자의 선택적 구매 / Apple App Store 및 검증된 Apple 거래·알림</td></tr>
         <tr><td>오류 로그</td><td>사용자 ID, 앱 버전, 기기 플랫폼, 오류 유형, 화면 이름, 민감한 패턴을 가린 오류 메시지, 부분 스택 트레이스. <strong>미수집:</strong> 거래 금액, 계좌명, 메모, 태그 등 이용자 입력 데이터</td><td>앱 오류/충돌 시 자동 수집</td></tr>
         <tr><td>문의 및 내보내기</td><td>가입 이메일, 문의·삭제 요청 내용, 요청한 CSV 거래 데이터, 요청 제한에 사용하는 내보내기 요청일과 식별자</td><td>이용자 입력 / 내보내기 요청</td></tr>
         <tr><td>검색 및 인증 메타데이터</td><td>Yahoo Finance로 전송하는 종목 추가 요청 검색어. 인증 서비스가 처리하는 세션 식별자, IP 주소 및 사용자 에이전트 정보</td><td>종목 검색 / 인증 요청</td></tr>
@@ -249,6 +257,7 @@
       <li><strong>오류 로그</strong> – 버그 식별 및 앱 안정성 개선</li>
       <li><strong>문의·내보내기·검색</strong> – 문의 응답, 거래 기록 전송, 내보내기 요청 제한 및 종목 검색. 인증 메타데이터는 세션 유지와 보안에 사용합니다.</li>
       <li><strong>개발자 응원 구매</strong> – 선택한 구매의 유효성 확인과 소비 처리, 중복·부정 청구 방지, 검증된 응원 횟수 표시에 사용합니다.</li>
+      <li><strong>Apple 환불·철회</strong> - 검증된 응원 횟수를 갱신하고 환불·철회된 거래가 다시 집계되는 것을 막는 데 사용합니다. 최소 표식을 광고나 추적에 사용하지 않습니다.</li>
       <li><strong>환경 설정</strong> – 앱 내 사용자 맞춤 경험 제공</li>
     </ul>
     <p>수집된 개인정보는 광고, 프로파일링, 제3자 판매 등의 목적으로 사용되지 않습니다.</p>
@@ -262,6 +271,7 @@
       <li><strong>Supabase BV</strong> (EU 리전 – 독일 프랑크푸르트) – 데이터베이스 호스팅 및 인증 인프라</li>
       <li><strong>Google LLC</strong> – Google 로그인 및 요청한 이메일 전송. 로그인 시 기본 프로필 정보가 제공될 수 있으며, 이름·프로필 사진은 앱 기능에 사용하지 않습니다. Gmail로 문의·삭제 요청을 받고 요청한 CSV 내보내기를 전송합니다. 인증 및 이메일 정보는 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 처리됩니다.</li>
       <li><strong>Google Play</strong> – 선택한 개발자 응원 결제를 처리하고, 서버가 구매 유효성·중복 청구 여부를 확인한 뒤 제품을 소비할 수 있도록 구매 정보를 제공합니다. 결제수단 정보는 Google이 직접 처리하며 JustBalance는 전달받지 않습니다. Google은 <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice" target="_blank">Google Payments 개인정보처리방침</a> 및 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 관련 기록을 처리합니다.</li>
+      <li><strong>Apple App Store</strong> - 선택한 Apple 개발자 응원 결제를 처리하고 구매 검증·계정 연결·완료·재전송 방지를 위한 거래·환불 정보를 제공합니다. 앱 계정 토큰으로 구매를 앱 계정에 연결합니다. 결제수단 정보는 Apple이 직접 처리하며 JustBalance는 전달받지 않습니다. Apple은 자체 약관 및 <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple 개인정보처리방침</a>에 따라 독립적인 기록을 처리합니다.</li>
     </ul>
     <p>종목 추가 요청 검색과 통화쌍 확인은 Yahoo Finance에 직접 연결합니다. 검색어와 IP 주소 등 접속 정보가 Yahoo에 전달되며, 통화 목록은 Frankfurter에서 조회합니다. 각 서비스는 자체 방침에 따라 접속 정보를 처리합니다. 이 시세 관련 요청에 비밀번호, 잔액, 거래 메모를 보내지 않습니다.</p>
     <p>앱 데이터베이스는 유럽연합(EU) 내 독일 프랑크푸르트에서 호스팅됩니다. Google 인증·이메일·Play 결제 처리는 별도 서비스이며, 해당 서비스의 처리 위치와 보호 조치는 위 Google 방침을 확인해 주세요.</p>
